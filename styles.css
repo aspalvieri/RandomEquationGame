@@ -1,0 +1,215 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei');
+
+/*
+    Author: Alex Spalvieri
+    ID: 200403578
+*/
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size: 1.2em;
+    line-height: 1.2;
+    background-color: rgb(243, 228, 192);
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    color: black;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+small {
+    font-size: 0.8em;
+}
+
+small.smaller {
+    font-size: 0.6em;
+}
+
+h1 {
+    font-size: 2.0em;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+header, footer, aside, section {
+    padding: 10px;
+}
+
+input, select, textarea, button {
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size: inherit;
+}
+
+div#content {
+    width: 1000px;
+    background-color: rgb(240, 207, 135);
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+    padding-bottom: 0;
+}
+
+header nav {
+    display: flex;
+    margin-top: 5px;
+    justify-content: center;
+}
+
+header nav button {
+    text-decoration: none;
+    padding: 10px;
+    background-color: rgb(231, 196, 131);
+    font-size: 1.1em;
+    margin-left: 10px;
+    color: black;
+    border: none;
+}
+header nav button:focus, section button {
+    outline: none;
+}
+header nav button:hover {
+    background-color: rgb(218, 180, 110);
+}
+header nav button:active {
+    background-color: rgb(223, 173, 80);
+}
+header nav button:first-child {
+    margin-left: 0;
+}
+header nav button.selected {
+    background-color: burlywood;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+        "aside section section";
+    grid-template-rows: auto;
+    grid-template-columns: 1.2fr 0.9fr 0.9fr;
+    border: 5px solid burlywood;
+}
+
+aside {
+    grid-area: aside;
+    background-color: rgb(224, 190, 115);
+    text-align: center;
+}
+
+section {
+    grid-area: section;
+    background-color: rgb(224, 190, 115);
+    text-align: center;
+    border-left: 5px black;
+    border-style: double;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+}
+footer p {
+    margin-bottom: 8px;
+}
+
+table tr {
+    border: 5px ridge darkgoldenrod;
+}
+table th {
+    font-weight: bold;
+    border-right: 5px double goldenrod;
+    width: 33%;
+    font-size: 0.8em;
+}
+table th:last-child {
+    border-right: none;
+}
+table td {
+    width: 33%;
+    border-right: 5px double goldenrod;
+    font-size: 0.8em;
+    text-align: center;
+}
+table td:last-child {
+    border-right: none;
+}
+table {
+    font-size: 1.2em;
+    width: 350px;
+    margin: 0 auto;
+}
+.green {
+    background-color: rgba(0, 128, 0, 0.33);
+}
+.red {
+    background-color: rgba(255, 0, 0, 0.33);
+}
+
+.options-table {
+    border: 2px solid black;
+    display: inline-block;
+    padding: 0 8px 8px 8px;
+}
+.options-table p {
+    margin: 0 5px 5px 5px;
+}
+
+label:hover {
+    color: rgb(0, 17, 255);
+    background-color: rgb(240, 203, 123);
+}
+label:active {
+    color: black;
+}
+
+section button {
+    padding: 6px 10px;
+    background-color: rgb(199, 150, 60);
+    border: none;
+}
+section button:hover {
+    background-color: rgb(218, 168, 77);
+}
+section button:active {
+    background-color: rgb(173, 131, 52);
+}
+
+.score-symbol {
+    opacity: 1;
+    position: absolute;
+    width: 0;
+    transition: opacity 1s, width 1s;
+}
+
+@media screen and (max-width: 1000px) {
+    div#content {
+        width: unset;
+        max-width:1000px;
+    }
+}

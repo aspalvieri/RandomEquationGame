@@ -1,0 +1,88 @@
+<!-- 
+    Author: Alex Spalvieri
+    ID: 200403578
+-->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>Alex Spalvieri - Assignment 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div id="content">
+        <header>
+            <h1>Random Equation Game</h1>
+            <nav>
+                <button id="saveSlot1">Save Slot 1</button>
+                <button id="saveSlot2">Save Slot 2</button>
+                <button id="saveSlot3">Save Slot 3</button>
+            </nav>
+        </header>
+        <main>
+            <aside>
+                <h2>Equation History</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Equation</th>
+                            <th>Input</th>
+                            <th>Answer</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history">
+                        <template id="template-entry">
+                            <tr>
+                                <td class="template-equation"></td>
+                                <td class="template-input"></td>
+                                <td class="template-answer"></td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </aside>
+            <section>
+                <div class="options-table">
+                    <h3>Options</h3>
+                    <p>
+                        <small>Number range for equations to randomize from:</small>
+                        <br />
+                        Min: <input type="number" id="min" value="1" style="width: 55px;" min="1" max="999" />
+                        Max: <input type="number" id="max" value="100" style="width: 55px;" min="1" max="999" />
+                    </p>
+                    <p>
+                        <input type="checkbox" id="addition" name="addition" checked><label for="addition">Addition</label>
+                        |
+                        <input type="checkbox" id="subtraction" name="subtraction" checked><label for="subtraction">Subtraction</label>
+                        |
+                        <input type="checkbox" id="multiplication" name="multiplication" checked><label for="multiplication">Multiplication</label>
+                        |
+                        <input type="checkbox" id="division" name="division" checked><label for="division">Division</label>
+                    </p>
+                </div>
+                <h3>
+                    Total Score: <span id="score">0</span>
+                    <span id="score-list">
+                        <!-- +/- score symbol goes into here -->
+                    </span>
+                </h3>
+                <h3>Equation: <span id="equation"></span></h3>
+                <template id="template-score">
+                    <span class="score-symbol">+5</span>
+                </template>
+                <p><small>Round division to 2 decimal places</small></p>
+                <input type="number" id="input" value="" />
+                <button id="submit">Submit</button>
+                <button id="skip">Skip</button>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2019 - Alex Spalvieri</p>
+            <button id="delete-data">Delete Save Data</button>
+        </footer>
+    </div>
+</body>
+</html>
